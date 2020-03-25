@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- 
+줄바꿈 되는 블럭요소[태그가 자체 크기]와 인라인 요소[한줄에 열거]가 있다.
+css를 통해서 속성을 변경할 수 있다.
+태그#네임을 써주면 개별적으로 태그를 적용할 수 있다.
+인라인은 자체크기를 가지 못하여 사이즈 반영이 안됨. 하려면 display : block을 해준다.
+display에 none값을 주면 보이지 않는다.
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS적용해 보기</title>
+<style type="text/css">
+ 
+ div{
+ display:block;
+ width : 300px;
+ height : 200px;
+ background-color : red;
+ }
+ span#sp_1{ 
+ display:black;
+ width: 200px;
+ height : 500px;
+ background-color : yellow; 
+ }
+ span#sp_2{ 
+ display:none;
+ width: 200px;
+ height : 500px;
+ background-color : green; 
+ }
+</style>
+</head>
+<body>
+<div>Div:ajax에서 많이 활용-기억</div>
+<span>SPAN</span>
+<hr>
+<span id="sp_1">hello</span>
+<span id="sp_2">html5!!!</span>
+<h1>코로나19</h1>
+</body>
+</html>
