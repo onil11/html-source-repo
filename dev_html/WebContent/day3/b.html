@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript">
+function confirm(){
+	//var v_msg = document.getElementById("d_msg");  //Element ->태그이름  다른말로 node
+	//v_msg.innerText="after v_msg : "+v_msg ;
+	v_msg.innerHTML="<font color='red'><h1>after</h1></font> v_msg : "+v_msg;
+	//v_msg.innerText="<font color='red'><h1>after</h1></font> v_msg :" + v_msg;
+}
+function test(){
+	var s_msg = document.getElementById("f_msg");
+	s_msg.innerText="ater f_msg : " + s_msg;
+}
+
+</script>
+</head>
+<body>
+<script type="text/javascript">
+//before
+var v_msg = document.getElementById("d_msg");
+	console.log("before v_msg : "+v_msg);
+</script>
+<div id="d_msg">당신의 아이디를 입력하세요.[안내]</div>
+<h1 id="f_msg"> 실험을 해보세요.</h1>
+<script type="text/javascript">
+//after
+var v_msg = document.getElementById("d_msg");  //Element ->태그이름  다른말로 node
+	//v_msg.innerText="after v_msg : "+v_msg ;
+	console.log("after v_msg : "+v_msg);
+</script>
+<buttion onclick="confirm()">확인</buttion><br>
+<buttion onclick="test()">테스트</buttion>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 위치</title>
+<!-- header영역에 자바스크립트를 쓸 수 있다. 
+전역변수 선언
+함수 선언
+해더부분의 자바스크립트 영역은 호출해야 출력이 된다.
+-->
+<script type="text/javascript">
+var mem_id="apple"; // 전역변수(헤더부분)
+function test(){
+	alert(mem_id + " test호출 성공");
+}
+</script>
+</head>
+<body>
+<!-- body영역에 자바스크립트를 쓸 수 있다. 
+바디부분의 자바스크립트는 호출하지 않아도 출력이 된다.
+즉시 실행됨
+-->
+<script type="text/javascript">
+test();
+document.write("안녕");
+</script>
+</body>
+</html>
