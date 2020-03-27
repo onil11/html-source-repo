@@ -40,5 +40,6 @@ public class JsonDeptList {
 		Gson g = new Gson();
 		String temp = g.toJson(deptList);
 		System.out.println(temp);
+
 	}
 }

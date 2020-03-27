@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onload이벤트 활용</title>
+</head>
+<body>
+<!-- 
+	dom먼저 ? 아님 event처리가 먼저..?
+ -->
+ <script type="text/javascript">
+ 	/*
+    var be = document.getElementById("header");
+ 	alert("before==>"+be); //null
+ 	*/
+ 	window.onload = function(){//익명함수 - 한번만.
+ 		//이벤트 연결하기
+ 		var header = document.getElementById("header");
+ 		header.onclick = function(){
+ 			alert("클릭~~")
+ 			//이벤트를 다시 사용하지 않을경우.
+ 			header.onclick = null; //자원반납하기-버블링 발생 방지.
+ 		}
+ 	};
+ </script>
+	<h1 id="header">Click</h1>
+	<button id="buttona"><h1>buttonA</h1></button>
+	<button id="buttonb"><h1>buttonB</h1></button>
+ <script type="text/javascript">
+ 	/*
+    var af = document.getElementById("header");
+    alert("after==>" +af); //HTML Ojbect
+    */
+ </script>
+</body>
+</html>

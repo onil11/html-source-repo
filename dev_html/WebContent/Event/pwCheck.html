@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>비밀번호 확인하기</title>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+	document.getElementById("f_member").onsubmit = function(){
+		alert("제출 호출");
+	var u_pw = $("mem_pw").val();
+		//alert("사용자가 입력한 비번 ===>" + u_pw);
+	var u_check = $("pw_check").();
+	    //alert("사용자가 입력한 비번 ==>"+u_pw);
+		if(u_pw == u_check){
+			alert("성공");
+			return true;
+		}else{
+			alert("다시 입력 해주세요.");
+			return false;
+		}
+	}
+};
+</script>
+</head>
+<body>
+<!-- 
+id는 화면에서 name은 서버 언어(톰켓)
+ -->
+	<form id="f_member" method="get" action="sendCheck.jsp">
+		<label>이름</label><br>
+		<input type="text" id="mem_name" name="mem_name"/><br>
+		<label>비번</label><br>
+		<input type="text" id ="mem_pw" name = "mem_pw" /><br>
+		<label>비번확인</label><br>
+		<input type="text" id="pw_check" name = "pw_check" /><br>
+		<input type="submit" value="제출">
+	</form>
+</body>
+</html>

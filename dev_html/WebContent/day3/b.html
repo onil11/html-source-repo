@@ -7,9 +7,10 @@
 function confirm(){
 	//var v_msg = document.getElementById("d_msg");  //Element ->태그이름  다른말로 node
 	//v_msg.innerText="after v_msg : "+v_msg ;
-	v_msg.innerHTML="<font color='red'><h1>after</h1></font> v_msg : "+v_msg;
-	//v_msg.innerText="<font color='red'><h1>after</h1></font> v_msg :" + v_msg;
+	v_msg.innerHTML="<font color='red'><h1>after</h1></font> v_msg : "+v_msg; //html로 출력하기때문에 font타입이 먹음.
+	v_msg.innerText="<font color='red'><h1>after</h1></font> v_msg :" + v_msg; //텍스트로 쓰기 때문에 폰트타입모두 글자로 그대로 출력.
 }
+
 function test(){
 	var s_msg = document.getElementById("f_msg");
 	s_msg.innerText="ater f_msg : " + s_msg;
@@ -18,7 +19,7 @@ function test(){
 </script>
 </head>
 <body>
-<script type="text/javascript">
+<script type="text/javascript"> 
 //before
 var v_msg = document.getElementById("d_msg");
 	console.log("before v_msg : "+v_msg);

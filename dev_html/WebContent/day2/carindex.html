@@ -4,11 +4,47 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
+    li {list-style : none;}
+	a {text-decoration : none;}
+	/*
 	#main_header{
 	 background:#1D4088;
 	 color:white;
 	 border-bottom: 5px solid block;
 	}
+	*/
+	#main_header{
+	height : 60px;
+	padding-left : 10px;
+	border-bottom : 1px solid black;
+	background-color : #89A236;
+	color : white;	
+	}
+	#main_gnb{
+	overflow : hidden;
+	background-color : #215A15
+	}
+	a {
+	color : white;
+	padding : 10px 20px; 
+	font-weight : bold;
+	border-left : 1px solid #89A236;
+	border-right : 1px solid #89A236;
+	}
+	.left {
+	float : left;
+	}
+	.right {
+	float: right;
+	}
+	.left > li {
+	width : 150px;
+	float : left;
+	}
+	.right > li{
+	width : 120px;
+	float : left;
+	}	
 </style>
 </head>
 <body>
@@ -17,7 +53,17 @@
 	<!--================ header 영역================= -->
 	<tr height="50px" ><td id="main_header" align = "center"><h1>Header</h1></td></tr>
 	<!--================= navi 영역 ==================-->
-	<tr height="50px"><td><h1>navigation</h1></td></tr>
+	<tr height="50px"><td id="main_gnb">
+			<ul class ="left"> 
+				<li><a href="#">Java 수업</a></li>
+  				<li><a href="#">Oracle 수업</a></li>
+  				<li><a href="#">HTML 수업</a></li>
+  			</ul>
+			<ul class ="right"> 
+				<li><a href="#">로그인</a></li>
+  				<li><a href="#">회원가입</a></li>
+			</ul></td></tr>
+	
 	<!--================= body 영역 ================= -->
 	<tr>
 		<td>
